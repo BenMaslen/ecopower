@@ -1,20 +1,23 @@
 Package: ecopower
 Type: Package
-Title: Power estimates for multivariate abundance data
+Title: Power Estimates and Equivalence Testing for Multivariate Abundance Data
 Version: 0.1.0
-Authors@R: person("Ben", "Maslen", email = "b.maslen@unsw.edu.au", 
-    role = c("aut", "cre"))
-Description: Provides power estimates by simulation for multivariate 
-    abundance data to be used for sample size estimates. The package 
-    also provides functions for parameterising multivariate effect
+Authors@R: c(
+	person("Ben", "Maslen", role = "aut"),
+    person("Michelle", "Lim", email = "michelle.lim@unsw.edu.au", role = c("aut", "cre"))
+    )
+Description: Estimates power by simulation for multivariate
+    abundance data to be used for sample size estimates. Multivariate
+    equivalence testing by simulation from a Gaussian copula model.
+    The package also provides functions for parameterising multivariate effect
     sizes and simulating multivariate abundance data jointly.
-Depends: R (>= 3.3.0),
-         mvabund (>= 3.13.1)
-Imports: MASS (>= 7.3),
-	 matrixcalc (>= 1.0-3),
-	 psych (>= 1.8.12),
-	 parallel (>= 3.5.3)
+Depends: R (>= 3.5.0)
+Imports: parallel,
+    mvabund,
+    ecoCopula,
+    stats
 Encoding: UTF-8
 LazyData: true
 License: LGPL (>= 2.1)
-RoxygenNote: 7.0.1
+RoxygenNote: 7.1.1
+Suggests: testthat
